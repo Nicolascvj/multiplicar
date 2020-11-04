@@ -1,0 +1,24 @@
+
+//const multiplicar=require('./multiplicar/multiplicar.js')
+
+let opciones={
+    base:{
+    demand:true,
+    alias:'b',
+    desc: 'La base de la tabla de multiplicar'
+},
+limite:{
+    alias:'l',
+    default:10,
+    desc: 'Limite de la taba de multiplicar'
+}
+};
+
+
+const argv= require('yargs')
+.command('imprimir', 'Imprime en la consola la tabla de multiplicar',opciones)
+.command('crear', 'Crea un archivo de la tabla de multiplicar',opciones)
+.argv;
+
+module.exports={
+}
